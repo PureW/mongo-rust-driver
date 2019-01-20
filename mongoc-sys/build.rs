@@ -10,7 +10,6 @@ fn lin(mongoc_version: &str) {
     use std::process::Command;
 
     if pkg_config::Config::new()
-        .atleast_version(mongoc_version)
         .statik(true)
         .probe("libmongoc-1.0")
         .is_err()
